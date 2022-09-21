@@ -9,14 +9,16 @@
 body {
     display: flex;
     width:100%;
-    height: auto;
+    height: 100%;
     margin: 0;
+    /* overflow: hidden; */
+    background-color: #f5f5f5;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* backsplash and logo text box */
 .left-container{
     display: flex;
-    flex: 4.5;
+    /* flex: 4.5; */
     height: 100vh;
     width: 40vw;
     min-width: 40vw;
@@ -49,20 +51,24 @@ body {
     width: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:center;
+    height: auto;
 }
 
 /* form styling */
 .top-section {
     padding-left: 5%;
     padding-right: 5%;
-    background-color: lightgray;
-    height: 35vh;
+    background-color: #f5f5f5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: bottom left;
 }
 fieldset {
     padding-left: 0;
     border: none;
-    height: 35vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -72,18 +78,20 @@ fieldset {
 legend {
     font-size: x-large;
     font-weight: bolder;
-    padding-top: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .mid-section {
-
+    background-color: white;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 form {
     padding-right: 5%;
     padding-left: 5%;
-    box-shadow: 5px 2px 2px gray;
-    font-size: large;
-
+    box-shadow: 10px 5px 5px lightgray;
+    
 }
 
 label,
@@ -94,8 +102,8 @@ label {
     font-size: medium;
 }
 input{
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
     width: 100%;
     height: 1.5rem;
     border-radius: 4px;
@@ -104,11 +112,13 @@ input{
 }
 
 .bottom-section{
-    height: 35vh;
     padding-right: 5%;
     padding-left: 5%;
     font-size: large;
-    background-color: lightgray;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 button {
@@ -118,4 +128,5 @@ border-radius: 5px;
 padding: 15px 60px;
 font: bolder;
 font-size: large;
+width: 18rem;
 }
