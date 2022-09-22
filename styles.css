@@ -111,6 +111,25 @@ input{
     border-color: #e5e7eb;
 }
 
+/* validation */
+input:focus {
+    outline: none;
+    border: 2px solid #0047AB;
+    box-shadow: 2px 1px 1px lightskyblue;
+}
+
+input:valid{
+    outline: none;
+    border: 2px solid green;
+    box-shadow: 2px 1px 1px lightgreen;
+}
+
+/* input:invalid{
+    outline: none;
+    border: 2px solid red;
+    box-shadow: 2px 1px 1px lightcoral;
+} */
+
 .bottom-section{
     padding-right: 5%;
     padding-left: 5%;
