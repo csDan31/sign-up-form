@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="/script.js" defer></script>
     <title>Sign-Up Form</title>
 </head>
 <body>
@@ -34,30 +35,30 @@
 
             <div class="form-left-container">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" placeholder="John">
+            <input type="text" id="firstName" placeholder="John" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="John.Doe@gmail.com">
+            <input type="email" id="email" placeholder="John.Doe@gmail.com" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password">
+            <label for="password">Password <span>(8 characters minimum)</span></label>
+            <input type="password" id="password" required minlength="8" maxlength="30" class="error">
         </div>
-<div class="form-right-container">
+            <div class="form-right-container">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" placeholder="Doe">
+            <input type="text" id="lastName" placeholder="Doe" required>
 
             <label for="tele">Phone Number</label>
-            <input type="tel" id="tele" minlength="10" maxlength="10" placeholder="999-999-9999">
+            <input type="tel" id="tele" minlength="10" maxlength="12" placeholder="999-999-9999" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
 
-            <label for="password">Confirm Password</label>
-            <input type="password" id="password">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" required minlength="8" maxlength="30" class="error">
         </div>
         </fieldset>
         </form>
     </div>
 
     <div class="bottom-section">
-<button type="Submit"><strong>Create Account</strong></button>
+<button type="Submit" onclick="pwdValidation()"><strong>Create Account</strong></button>
 <p>Already have an account? <a href=""> Log in</a>
 </p>
     </div>
