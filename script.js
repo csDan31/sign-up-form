@@ -9,5 +9,15 @@ function pwdValidation() {
     passwordInput.className = 'error active';
     confirmPwdInput.className = 'error active';
     passwordInput.textContent = "* Passwords do not match";
+    } else {
+        passwordInput.className = 'error inactive';
+        confirmPwdInput.className = 'error inactive';
     }
+}
+
+function errorInactive() {
+    let passwordInput = document.getElementById('password');
+    let confirmPwdInput = document.getElementById('confirm-password');
+        passwordInput.className = 'error inactive';
+        confirmPwdInput.className = 'error inactive';
 }
