@@ -8,10 +8,11 @@ function pwdValidation() {
     if(password !== confirmPassword){
     passwordInput.className = 'error active';
     confirmPwdInput.className = 'error active';
-    passwordInput.textContent = "* Passwords do not match";
+    document.querySelector('.password-error').textContent = "* Passwords do not match";
     } else {
         passwordInput.className = 'error inactive';
         confirmPwdInput.className = 'error inactive';
+        document.querySelector('.password-error').textContent = '';
     }
 }
 
